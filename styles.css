@@ -105,9 +105,15 @@ img { max-width: 100%; display: block; }
 }
 .hero-inner {
   position: relative; z-index: 2;
-  display: grid; grid-template-columns: 1.25fr 0.85fr; gap: 50px;
-  padding: 84px 22px 90px;
+  display: grid; grid-template-columns: 1.45fr 0.55fr; gap: 40px;
+  padding: 84px 22px 0;
   align-items: center;
+}
+/* Elizabeth standing next to the headline */
+.hero-figure-wrap { align-self: end; justify-self: center; }
+.hero-figure {
+  display: block; width: auto; height: clamp(360px, 44vw, 560px);
+  filter: drop-shadow(0 22px 36px rgba(0,0,0,0.55));
 }
 .kicker { font-family: var(--head); letter-spacing: 3px; color: var(--blue-300); font-size: 0.82rem; margin-bottom: 14px; }
 .hero h1 {
@@ -119,7 +125,7 @@ img { max-width: 100%; display: block; }
 .hero-lead strong { color: #fff; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
-.hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.hero-stats { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding-bottom: 72px; }
 .stat {
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(91,147,247,0.25);
