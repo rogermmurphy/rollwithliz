@@ -1,6 +1,9 @@
 # Claude Code local settings
 .claude/
 
+# Photo source files (only the cropped photo.jpg is published)
+headshot_source.png
+
 # OS / editor cruft
 .DS_Store
 Thumbs.db
