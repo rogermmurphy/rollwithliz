@@ -1,8 +1,9 @@
 # Claude Code local settings
 .claude/
 
-# Photo source files (only the cropped photo.jpg is published)
-headshot_source.png
+# Photo source files (only the published photo.jpg / business-card.png ship)
+*_source.png
+fullbody_standing.png
 
 # OS / editor cruft
 .DS_Store
