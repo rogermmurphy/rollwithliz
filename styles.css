@@ -105,10 +105,14 @@ img { max-width: 100%; display: block; }
 }
 .hero-inner {
   position: relative; z-index: 2;
-  display: grid; grid-template-columns: 1.25fr 0.85fr; gap: 50px;
+  display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 50px;
   padding: 84px 22px 90px;
   align-items: center;
 }
+/* photo on the left of the headline, copy on the right */
+.hero-portrait { order: 1; }
+.hero-copy { order: 2; }
+.hero-stats { order: 3; }
 .kicker { font-family: var(--head); letter-spacing: 3px; color: var(--blue-300); font-size: 0.82rem; margin-bottom: 14px; }
 .hero h1 {
   font-family: var(--head); font-weight: 700; text-transform: uppercase;
