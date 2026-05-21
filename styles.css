@@ -211,6 +211,11 @@ img { max-width: 100%; display: block; }
 .badge-num { font-family: var(--head); font-weight: 700; font-size: 2rem; }
 .badge-text { font-family: var(--head); font-size: 0.72rem; letter-spacing: 1px; line-height: 1.1; }
 .about-copy p { margin-top: 16px; color: #cdd6ea; }
+.about-copy p.about-tagline {
+  font-family: var(--head); font-size: 1.22rem; font-weight: 600;
+  letter-spacing: 0.4px; color: #eaf0fb; margin-top: 14px;
+}
+.about-copy p.about-tagline .hl { color: var(--blue-300); }
 .section-dark .about-copy p { color: #cdd6ea; }
 .about-copy p strong { color: #fff; }
 .about-copy .btn { margin-top: 26px; }
