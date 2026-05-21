@@ -1,0 +1,12 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+
+# Never commit keys or secrets
+*.pem
+*_deploy
+*_deploy.pub
+id_*
+*.key
