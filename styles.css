@@ -378,10 +378,29 @@ img { max-width: 100%; display: block; }
 .post-card {
   display: flex; flex-direction: column; background: #fff;
   border: 1px solid var(--gray-200); border-radius: var(--radius);
-  padding: 30px 28px; box-shadow: var(--shadow); color: inherit;
-  transition: transform 0.18s ease, border-color 0.18s ease;
+  padding: 0; overflow: hidden; box-shadow: var(--shadow); color: inherit;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
 }
-.post-card:hover { transform: translateY(-5px); border-color: var(--blue-300); }
+.post-card:hover { transform: translateY(-6px); border-color: var(--blue-300); box-shadow: 0 28px 52px -22px rgba(8,22,56,0.55); }
+.post-banner {
+  height: 128px; display: flex; align-items: center; justify-content: center;
+  font-size: 3.4rem; line-height: 1; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, var(--blue-500), var(--navy-700));
+}
+.post-banner::after {
+  content: ""; position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(115deg, rgba(255,255,255,0.07) 0 2px, transparent 2px 24px);
+}
+.post-banner span { position: relative; z-index: 1; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35)); transition: transform 0.18s ease; }
+.post-card:hover .post-banner span { transform: scale(1.1); }
+.post-banner.b-teal   { background: linear-gradient(135deg, #17b3c4, #0d2f47); }
+.post-banner.b-gold   { background: linear-gradient(135deg, #e0a93b, #5a3a0d); }
+.post-banner.b-green  { background: linear-gradient(135deg, #2bb673, #0d3a2b); }
+.post-banner.b-orange { background: linear-gradient(135deg, #f0892f, #5a2a0d); }
+.post-banner.b-red    { background: linear-gradient(135deg, #e0573b, #4a120d); }
+.post-banner.b-purple { background: linear-gradient(135deg, #7a5bf0, #1f0d47); }
+.post-banner.b-indigo { background: linear-gradient(135deg, #4a6bf0, #160d47); }
+.post-card-body { padding: 24px 26px 30px; display: flex; flex-direction: column; flex: 1; }
 .post-cat {
   font-family: var(--head); text-transform: uppercase; letter-spacing: 1.5px;
   font-size: 0.72rem; color: var(--blue-500); margin-bottom: 10px;
