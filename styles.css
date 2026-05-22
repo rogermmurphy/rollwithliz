@@ -355,6 +355,31 @@ img { max-width: 100%; display: block; }
 .leads-table th { background: var(--gray-100); font-family: var(--head); text-transform: uppercase; letter-spacing: 0.5px; }
 .leads-empty { color: var(--gray-500); padding: 20px 0; }
 
+/* ---------- Homepage resource teaser ---------- */
+.teaser-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 42px; }
+.teaser-card {
+  display: flex; flex-direction: column; gap: 14px; background: #fff;
+  border: 1px solid var(--gray-200); border-radius: var(--radius);
+  padding: 28px 26px; box-shadow: var(--shadow); color: inherit;
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+.teaser-card:hover { transform: translateY(-5px); border-color: var(--blue-300); }
+.teaser-icon {
+  width: 54px; height: 54px; border-radius: 12px; flex: none;
+  display: flex; align-items: center; justify-content: center; font-size: 1.7rem;
+  background: linear-gradient(135deg, var(--blue-500), var(--navy-700));
+}
+.teaser-card h3 {
+  font-family: var(--head); font-weight: 600; text-transform: uppercase;
+  font-size: 1.15rem; letter-spacing: 0.3px; line-height: 1.15; flex: 1;
+}
+.teaser-card .readmore {
+  font-family: var(--head); font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.5px; font-size: 0.82rem; color: var(--blue-500);
+}
+.teaser-cta { text-align: center; margin-top: 38px; }
+@media (max-width: 760px) { .teaser-grid { grid-template-columns: 1fr; } }
+
 /* ============================================================
    Blog / Resources
    ============================================================ */
@@ -393,6 +418,8 @@ img { max-width: 100%; display: block; }
 }
 .post-banner span { position: relative; z-index: 1; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35)); transition: transform 0.18s ease; }
 .post-card:hover .post-banner span { transform: scale(1.1); }
+.post-banner .banner-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2; transition: transform 0.25s ease; }
+.post-card:hover .post-banner .banner-img { transform: scale(1.05); }
 .post-banner.b-teal   { background: linear-gradient(135deg, #17b3c4, #0d2f47); }
 .post-banner.b-gold   { background: linear-gradient(135deg, #e0a93b, #5a3a0d); }
 .post-banner.b-green  { background: linear-gradient(135deg, #2bb673, #0d3a2b); }
