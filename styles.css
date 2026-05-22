@@ -411,6 +411,17 @@ img { max-width: 100%; display: block; }
 }
 .glossary dt { font-family: var(--head); font-weight: 600; color: var(--ink); font-size: 1.08rem; margin-top: 20px; }
 .glossary dd { margin: 4px 0 0; }
+.prose .lead-in { font-size: 1.2rem; color: var(--ink); line-height: 1.6; }
+.prose .callout {
+  border-left: 4px solid var(--blue-400); background: var(--gray-100);
+  padding: 16px 20px; border-radius: 0 10px 10px 0; margin: 0 0 22px; color: var(--ink);
+}
+.prose ul.checklist { list-style: none; margin-left: 0; }
+.prose ul.checklist li { position: relative; padding-left: 30px; }
+.prose ul.checklist li::before {
+  content: "\2713"; position: absolute; left: 0; top: -1px;
+  color: var(--blue-500); font-weight: 700; font-size: 1.05rem;
+}
 
 /* Post CTA */
 .post-cta {
