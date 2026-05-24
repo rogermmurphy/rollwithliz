@@ -479,8 +479,9 @@ img { max-width: 100%; display: block; }
   margin-top: 46px; background: linear-gradient(150deg, var(--blue-500), var(--navy-700));
   color: #fff; border-radius: var(--radius); padding: 34px 30px; text-align: center;
 }
-.post-cta h3 { font-family: var(--head); text-transform: uppercase; font-size: 1.5rem; margin-bottom: 10px; }
+.post-cta h3 { font-family: var(--head); text-transform: uppercase; font-size: 1.5rem; margin-bottom: 10px; color: #fff; }
 .post-cta p { color: #e7eefc; margin-bottom: 20px; max-width: 540px; margin-left: auto; margin-right: auto; }
+.post-cta .btn-primary { color: #fff; text-decoration: none; }
 
 /* ============================================================
    Responsive
