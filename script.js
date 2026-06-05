@@ -1,7 +1,7 @@
 /* ============================================================
    Elizabeth Murphy — site behavior
    - Mobile nav
-   - Lead + referral forms: save locally AND open prefilled email
+   - Lead + referral forms: save locally AND email via Web3Forms
    - Admin lead viewer (export CSV / clear)
    ============================================================ */
 
@@ -10,6 +10,8 @@
 
   var CONTACT_EMAIL = "emurphy@gsquaredfunding.com";
   var STORAGE_KEY = "em_leads";
+  // Web3Forms — delivers form submissions to CONTACT_EMAIL. Account: emurphy@gsquaredfunding.com
+  var ACCESS_KEY = "ed79cf43-a377-4f15-aee2-8c81970d0ad0";
 
   /* ---------- Footer year ---------- */
   var yearEl = document.getElementById("year");
@@ -60,15 +62,6 @@
     return data;
   }
 
-  function buildMailto(subject, data) {
-    var lines = Object.keys(data).map(function (k) {
-      return labelize(k) + ": " + (data[k] || "");
-    });
-    return "mailto:" + CONTACT_EMAIL +
-      "?subject=" + encodeURIComponent(subject) +
-      "&body=" + encodeURIComponent(lines.join("\n"));
-  }
-
   function labelize(key) {
     return key.replace(/([A-Z])/g, " $1")
       .replace(/^./, function (c) { return c.toUpperCase(); });
@@ -78,6 +71,7 @@
     var form = document.getElementById(formId);
     var status = document.getElementById(statusId);
     if (!form) return;
+    var submitBtn = form.querySelector("button[type='submit']");
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -98,14 +92,45 @@
       data.type = type;
       data.submittedAt = new Date().toLocaleString();
 
+      // always keep a local backup
       saveLead(data);
 
-      // open prefilled email
-      window.location.href = buildMailto(subject, data);
+      // build a readable payload for Web3Forms
+      var payload = {
+        access_key: ACCESS_KEY,
+        subject: subject,
+        from_name: "Roll With Liz website"
+      };
+      Object.keys(data).forEach(function (k) {
+        payload[labelize(k)] = data[k] || "—";
+      });
 
-      status.textContent = "Thank you! Your email app should open to send the details. I'll be in touch personally.";
-      status.className = "form-status ok";
-      form.reset();
+      if (submitBtn) submitBtn.disabled = true;
+      status.textContent = "Sending…";
+      status.className = "form-status";
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(payload)
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (res && res.success) {
+            status.textContent = "Thank you! Your request is in — I'll be in touch personally.";
+            status.className = "form-status ok";
+            form.reset();
+          } else {
+            throw new Error(res && res.message ? res.message : "submit failed");
+          }
+        })
+        .catch(function () {
+          status.innerHTML = "Sorry — something went wrong. Please call me at <a href='tel:6789874397'><strong>678-987-4397</strong></a> and I'll take care of you.";
+          status.className = "form-status err";
+        })
+        .then(function () {
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
   }
 
