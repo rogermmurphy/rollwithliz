@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insurance | Elizabeth Murphy &amp; Lewis Worthy</title>
+  <meta name="description" content="Insurance resources for carriers referred by Lewis Worthy. Request a call from Elizabeth Murphy for factoring, loads, fuel, financing, and carrier support." />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .insurance-nav-note {
+      color: var(--blue-500); font-family: var(--head); font-size: .82rem;
+      font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+    }
+    .insurance-hero { padding-bottom: 46px; }
+    .insurance-hero-inner { max-width: 900px; }
+    .insurance-hero .hero-lead { max-width: 760px; }
+    .partner-line {
+      display: inline-flex; align-items: center; gap: 10px; margin-top: 24px;
+      padding: 10px 16px; border: 1px solid rgba(91,147,247,.38); border-radius: 999px;
+      color: #dbe6ff; background: rgba(91,147,247,.14); font-size: .92rem;
+    }
+    .partner-line strong { color: #fff; }
+    .insurance-grid { display: grid; grid-template-columns: .92fr 1.08fr; gap: 52px; align-items: start; }
+    .insurance-card {
+      margin: 24px 0; padding: 24px; border: 1px solid var(--gray-200);
+      border-radius: var(--radius); background: var(--gray-100);
+    }
+    .insurance-card h3 { margin-bottom: 12px; font-family: var(--head); font-size: 1.35rem; text-transform: uppercase; }
+    .coverage-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px; list-style: none; }
+    .coverage-list li { position: relative; padding-left: 20px; color: var(--gray-700); }
+    .coverage-list li::before { content: "✓"; position: absolute; left: 0; color: var(--blue-500); font-weight: 700; }
+    .partner-contact { display: grid; gap: 8px; margin-top: 18px; }
+    .partner-contact a { color: var(--ink); font-weight: 700; }
+    .partner-contact a:hover { color: var(--blue-500); }
+    .referral-note {
+      margin-bottom: 20px; padding: 13px 15px; border-left: 4px solid var(--blue-500);
+      background: var(--gray-100); color: var(--gray-700); font-size: .92rem;
+    }
+    .lead-form { scroll-margin-top: 100px; }
+    @media (max-width: 900px) { .insurance-grid { grid-template-columns: 1fr; gap: 36px; } }
+    @media (max-width: 560px) {
+      .insurance-nav-note { font-size: .7rem; text-align: right; }
+      .coverage-list { grid-template-columns: 1fr; }
+      .insurance-card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav" id="top">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="Roll With Liz home">
+        <span class="brand-name">ELIZABETH MURPHY</span>
+        <span class="brand-sub">Carrier Growth Specialist</span>
+      </a>
+      <span class="insurance-nav-note">Referred by Lewis Worthy</span>
+      <a href="tel:6789874397" class="nav-phone">678-987-4397</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero insurance-hero">
+      <div class="container insurance-hero-inner">
+        <p class="kicker">INSURANCE &amp; CARRIER SUPPORT</p>
+        <h1>Protect your business.<br /><span class="hl">Keep moving forward.</span></h1>
+        <p class="hero-lead">
+          Lewis Worthy and Elizabeth Murphy connect business owners and carriers with the resources
+          they need to protect their operation, strengthen cash flow, and keep their trucks moving.
+        </p>
+        <div class="partner-line">Your insurance contact: <strong>Lewis Worthy</strong></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container insurance-grid">
+        <div>
+          <p class="section-kicker">A TRUSTED CONNECTION</p>
+          <h2 class="section-title">Coverage for the road <span class="hl">ahead.</span></h2>
+          <p>
+            Worthy Insurance is an independent insurance agency serving personal and business needs.
+            Lewis can help you explore coverage options and compare the protection that fits your situation.
+          </p>
+
+          <div class="insurance-card">
+            <h3>Insurance options</h3>
+            <ul class="coverage-list">
+              <li>Commercial insurance</li>
+              <li>Auto insurance</li>
+              <li>Home insurance</li>
+              <li>Life insurance</li>
+              <li>Health insurance</li>
+            </ul>
+          </div>
+
+          <p>
+            When you also need help with freight, same-day factoring, fuel cards, financing, or compliance,
+            send Elizabeth your information using the form. She'll reach out personally.
+          </p>
+
+          <div class="partner-contact" aria-label="Lewis Worthy contact information">
+            <strong>Lewis Worthy</strong>
+            <span>Worthy Insurance and Financial Services, Inc.</span>
+            <a href="tel:8322300928">832-230-0928</a>
+            <a href="mailto:lewis@worthyinsurance.net">lewis@worthyinsurance.net</a>
+            <a href="http://www.worthyinsurance.net/" target="_blank" rel="noopener noreferrer">Visit Worthy Insurance</a>
+          </div>
+        </div>
+
+        <form class="lead-form" id="leadForm" novalidate>
+          <input type="hidden" name="referralSource" value="Lewis Worthy — Worthy Insurance" />
+          <input type="hidden" name="campaign" value="Insurance referral page" />
+          <h3>Request a Call</h3>
+          <p class="referral-note">Referred by Lewis Worthy? Your request will go directly to Elizabeth.</p>
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required />
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="company">Company (optional)</label>
+              <input type="text" id="company" name="company" autocomplete="organization" />
+            </div>
+            <div class="field">
+              <label for="trucks">Number of Trucks</label>
+              <select id="trucks" name="trucks">
+                <option value="">Select…</option>
+                <option>1</option>
+                <option>2–5</option>
+                <option>6–15</option>
+                <option>16+</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="interest">What can I help with?</label>
+            <select id="interest" name="interest" multiple size="7" class="multi">
+              <option>Insurance</option>
+              <option>Finding loads</option>
+              <option>Same-day pay / factoring</option>
+              <option>Financing</option>
+              <option>Fuel cards</option>
+              <option>Compliance help</option>
+              <option>Something else</option>
+            </select>
+            <small class="hint">Hold Ctrl (Cmd on Mac) to select more than one.</small>
+          </div>
+          <div class="field">
+            <label for="message">Message (optional)</label>
+            <textarea id="message" name="message" rows="3"></textarea>
+          </div>
+
+          <fieldset class="consent">
+            <legend>Text message preferences (optional)</legend>
+            <label class="consent-item">
+              <input type="checkbox" name="smsCustomerCare" value="Yes" />
+              <span>By checking this box, I agree to receive text messages about customer care
+              communications from G Squared Funding, LLC according to the
+              <a href="https://gsquaredfunding.com/privacy-policy" target="_blank" rel="noopener">privacy policy</a>.
+              Reply STOP to opt out. Reply HELP for help. Message frequency varies. Message and data
+              rates may apply. Consent is not a requirement to engage services. Carriers are not liable
+              for delayed or undelivered messages.</span>
+            </label>
+            <label class="consent-item">
+              <input type="checkbox" name="smsOpportunityNotices" value="Yes" />
+              <span>By checking this box, I agree to receive text messages about opportunity notices,
+              including shipping lane availability, from G Squared Funding, LLC according to the
+              <a href="https://gsquaredfunding.com/privacy-policy" target="_blank" rel="noopener">privacy policy</a>.
+              Reply STOP to opt out. Reply HELP for help. Message frequency varies. Message and data
+              rates may apply. Consent is not a requirement to engage services. Carriers are not liable
+              for delayed or undelivered messages.</span>
+            </label>
+          </fieldset>
+
+          <button type="submit" class="btn btn-primary btn-block">Send My Request</button>
+          <p class="form-status" id="leadStatus" role="status" aria-live="polite"></p>
+          <p class="form-fineprint">By submitting, you agree to be contacted by Elizabeth Murphy. Your information is never sold.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name">ELIZABETH MURPHY</span>
+        <p>Business Development &amp; Full-Service Factoring</p>
+        <p class="footer-tag">The right partner today builds a stronger tomorrow.</p>
+      </div>
+      <div class="footer-contact">
+        <a href="tel:6789874397">678-987-4397</a>
+        <a href="mailto:emurphy@gsquaredfunding.com">emurphy@gsquaredfunding.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span>&copy; <span id="year"></span> Elizabeth Murphy. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <a href="tel:6789874397" class="fab-call" aria-label="Call Elizabeth">📞</a>
+  <script src="script.js"></script>
+</body>
+</html>
