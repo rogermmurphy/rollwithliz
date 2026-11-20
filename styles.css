@@ -647,3 +647,6 @@ img { max-width: 100%; display: block; }
   .svc-btn::after { display: none; }
   .svc-lbl { padding-right: 0; }
 }
+
+.footer-privacy { color: inherit; text-decoration: underline; }
+.footer-privacy:hover { color: #fff; }
